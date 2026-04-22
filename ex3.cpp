@@ -21,7 +21,7 @@ void mystack:: init()
 }
 
 void mystack:: push(int x){
-    s[top] = x;
+    s[top] = xg
     top++;
 }
 
