@@ -68,34 +68,31 @@ int main()
     string input, output;
     op_stack s1;
 
-    cout << "Input an infix expression to convert: ";
+    cout << "input"
     cin >> input;
 
     input += EOS;
     s1.push(EOS);
 
     for(int i = 0; i < input.size(); i++){
-        if(is_operand(input[i])){
+        if(is_operand(input[i]))
             output += input[i];
-        }
         else {
             if(input[i] == '('){
                 s1.push(input[i]);
-            }
-            else if(input[i] == ')'){
+            } else if(input[i] == ')'){
                 while(s1.top_element() != '('){
                     output += s1.pop();
                 }
                 s1.pop();
-            } 
-            else {
-                while(s1.top_element() != EOS && get_precedence(s1.top_element()) >= get_precedence(input[i])){
+            } else {
+                while((s1.top_element != EOS) && get_precedence(s1.top_element()  >= get_precedence(input[i]))){
                     output += s1.pop();
                 }
-                if(input[i] != EOS)
+                if(input[i] != EOS){
                     s1.push(input[i]);
+                }
             }
         }
-    }  
-    cout << output << '\n';
+    }
 }
