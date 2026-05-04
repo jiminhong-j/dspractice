@@ -99,6 +99,7 @@ int my_list::num_nodes()
     return count;
 }
 
+// 점수 합계 구하기
 double my_list::score_sum()
 {
     double sum = 0;
@@ -111,6 +112,7 @@ double my_list::score_sum()
     return sum;
 }
 
+// 해당 이름의 점수 구하기
 double my_list::get_score(string tname)
 {
     node *p;
@@ -126,6 +128,8 @@ double my_list::get_score(string tname)
     return s;
 }
 
+
+// 한 노드 삭제하기
 int my_list::remove_a_node(string tname)
 {
     node *target, *prev;
@@ -175,8 +179,12 @@ int main()
     tmp.set_data("Choi", 85.1);
     a.add_to_tail(tmp);
 
+
+
     tmp.set_data("Ryu", 94.3);
     a.add_to_head(tmp);      // 2개의 원소 추가
+
+
 
     cout << a.num_nodes() << " : " << a.score_sum() << "\n";
 
