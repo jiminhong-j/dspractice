@@ -36,10 +36,12 @@ int main(){
     for(int i = 0; i < n; i++){
         cin >> s1.score[i];
     }
+    // 엔터 남아 있어서
+    cin.ignore();
     getline(cin, s1.name);
 
     s1.print();
-    
+
     delete[] s1.score; // 소멸자에 넣는 게 좋다
     return 0;
 }
