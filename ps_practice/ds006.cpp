@@ -70,13 +70,13 @@ int main(){
 
         for(int j = 0; j < s[i].name.length(); j++){
             if(s[i].name[j] == '_'){
-                s[i].name[j] == ' ';
+                s[i].name[j] = ' ';
             }
         }
-        cout << s[i].name << "(" << s[i].credit << ")\t" << s[i].grade << s[i].point << endl;
+        cout << s[i].name << "(" << s[i].credit << ")\t" << s[i].grade << " " << s[i].point << endl;
     }
 
-    cout << "Total Credits " << totalCredit << ", GPA ";
+    cout << "Total Credits " << totalCredit << ", GPA "; 
     printf("%.2f\n", gpa);
 
     return 0;
