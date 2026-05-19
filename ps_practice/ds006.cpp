@@ -66,6 +66,18 @@ int main(){
     gpa = total / (double)totalCredit;
 
     // 출력
+    for(int i = 0; i < n; i++){
+
+        for(int j = 0; j < s[i].name.length(); j++){
+            if(s[i].name[j] == '_'){
+                s[i].name[j] == ' ';
+            }
+        }
+        cout << s[i].name << "(" << s[i].credit << ")\t" << s[i].grade << s[i].point << endl;
+    }
+
+    cout << "Total Credits " << totalCredit << ", GPA ";
+    printf("%.2f\n", gpa);
 
     return 0;
 }
