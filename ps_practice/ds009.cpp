@@ -63,10 +63,27 @@ int main(){
 
 int findRoom(int persons[5]){
 // 이 곳에 생각 정리와 코드 구현
+    int roomno;
+    int full = 0;
 
+    for(int i = 0; i < 5; i++){
+        if(persons[i] >=2)
+            full++;
+    }
+
+    if(full == 5)
+        return -1;
+
+    while(1){
+        roomno = rand() % 5;
+        if(persons[roomno] < 2){
+            persons[roomno]++;
+            return roomno + 1;
+        }
+    }
 }
 
 void printReport(string mn[10], int mr[10], int mc, string wn[10], int wr[10], int wc){
 // 이 곳에 생각 정리와 코드 구현
-    
+
 }
