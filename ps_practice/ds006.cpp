@@ -13,6 +13,9 @@ struct Subject {
 int main(){
 
     int n = 3;
+    int totalCredit = 0;
+    double total = 0;
+    double gpa;
 
     Subject s[n];
 
@@ -55,9 +58,14 @@ int main(){
             s[i].grade = "F";
             s[i].point = 0.0;
         }
+        
+        totalCredit += s[i].credit;
+        total += s[i].credit * s[i].point;
     }
 
+    gpa = total / (double)totalCredit;
 
+    // 출력
 
     return 0;
 }
